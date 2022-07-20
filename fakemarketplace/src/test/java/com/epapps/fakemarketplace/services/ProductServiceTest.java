@@ -34,24 +34,5 @@ class ProductServiceTest {
         assertThat(sut.size(), equalTo(2));
     }
 
-    @Test
-    void createSaveAProductMappedFromDTO() {
-        ProductService productService = new ProductService(productRepository);
 
-        ProductRequestDto productRequest = new ProductRequestDto("Product 1", "das.jpg", 50d);
-        User seller = new User();
-        seller.setId(1L);
-
-        Product product = new Product();
-        product.setName("Product1");
-        product.setImg("das.jpg");
-        product.setId(1L);
-        product.setSeller(seller);
-        product.setPrice(50d);
-
-        Mockito.when(productRepository.save(any(Product.class))).thenReturn(product);
-        Product sut = productService.create(productRequest, seller);
-
-        assertThat(sut.getSeller(), equalTo(seller));
-    }
 }

@@ -1,43 +1,43 @@
 INSERT
 INTO
   users
-  (name, img)
+  (user_Name, img)
 VALUES
   ('Chigre', 'https://cdn-icons-png.flaticon.com/512/21/21104.png');
 
   INSERT
   INTO
     users
-    (name, img)
+    (user_Name, img)
   VALUES
     ('Pancho Porto', 'https://cdn-icons-png.flaticon.com/512/21/21104.png');
   INSERT
   INTO
     users
-    (name, img)
+    (user_Name, img)
   VALUES
     ('Flod', 'https://cdn-icons-png.flaticon.com/512/21/21104.png');
 
   INSERT
   INTO
     users
-    (name, img)
+    (user_Name, img)
   VALUES
-    ('Benito Leal Gallardo', 'https://cdn-icons-png.flaticon.com/512/21/21104.png');
+    ('Benito Leal', 'https://cdn-icons-png.flaticon.com/512/21/21104.png');
 
 INSERT
   INTO
     users
-    (name, img)
+    (user_Name, img)
   VALUES
     ('Marisol Evora', 'https://cdn-icons-png.flaticon.com/512/21/21104.png');
 
 INSERT
   INTO
     users
-    (name, img)
+    (user_Name, img)
   VALUES
-    ('Alvaro Garcia Lema', 'https://cdn-icons-png.flaticon.com/512/21/21104.png');
+    ('Alvaro Garcia', 'https://cdn-icons-png.flaticon.com/512/21/21104.png');
 
 
 
@@ -77,19 +77,19 @@ VALUES
             products
             (name, category, price, img, description, seller_id)
           VALUES
-            ('Magic land', 'Cuadros', 546, 'https://www.artmajeur.com/medias/mini/f/l/flodouce/artwork/15647398_magic-land-3-b.jpg?v=1649958519', 'Pintura, acrílico en lienzo de lino', 3);
+            ('Magic land', 'Cuadros', 546, 'https://www.artmajeur.com/medias/mini/f/l/flodouce/artwork/15647398_magic-land-3-b.jpg?v=1649958519', 'Pintura, acrilico en lienzo de lino', 3);
             INSERT
             INTO
               products
               (name, category, price, img, description, seller_id)
             VALUES
-              ('Migrantes', 'Cuadros', 3503, 'https://www.artmajeur.com/medias/mini/a/n/ancalatita/artwork/14484845_migrantes.jpg', 'Pintura,acrílico en lienzo', 4);
+              ('Migrantes', 'Cuadros', 3503, 'https://www.artmajeur.com/medias/mini/a/n/ancalatita/artwork/14484845_migrantes.jpg', 'Pintura, acrilico en lienzo', 4);
               INSERT
               INTO
                 products
                 (name, category, price, img, description, seller_id)
               VALUES
-                ('La desforestacion masiva importa un pimiento', 'Cuadros', 1572, 'https://www.artmajeur.com/medias/mini/a/n/ancalatita/artwork/14577305_me-importa-un-pimiento.jpg', 'Pintura, acrílico en madera', 4);
+                ('La desforestacion masiva importa un pimiento', 'Cuadros', 1572, 'https://www.artmajeur.com/medias/mini/a/n/ancalatita/artwork/14577305_me-importa-un-pimiento.jpg', 'Pintura, acrilico en madera', 4);
                 INSERT
                 INTO
                   products
@@ -101,7 +101,7 @@ VALUES
                     products
                     (name, category, price, img, description, seller_id)
                   VALUES
-                    ('Pretend to be normal', 'Cuadros', 902, 'https://www.artmajeur.com/medias/mini/m/a/marisol-evora/artwork/15838339_pretend-to-be-normal-whole-bild.jpg', 'Pintura,acrilico, rotulador en lienzo', 5);
+                    ('Pretend to be normal', 'Cuadros', 902, 'https://www.artmajeur.com/medias/mini/m/a/marisol-evora/artwork/15838339_pretend-to-be-normal-whole-bild.jpg', 'Pintura, acrilico, rotulador en lienzo', 5);
                     INSERT
                     INTO
                       products
@@ -126,3 +126,17 @@ VALUES
                             (name, category, price, img, description, seller_id)
                           VALUES
                             ('Lagarto, lagarto', 'Grabados', 235, 'https://www.artmajeur.com/medias/mini/a/l/alvaro-garcia-lema/artwork/15909760_lagarto-lagarto.jpg?v=1658078633', 'Xilografia en papel', 6);
+
+INSERT
+INTO
+  messages
+  (message, creator_id, product_id)
+VALUES
+  ('Hola soy un mensaje para comprar el producto 1', 1, 1);
+
+INSERT
+INTO
+  messages
+  (message, creator_id, product_id)
+VALUES
+  ('Mensaje para el producto 2', 1, 2);
