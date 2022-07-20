@@ -11,4 +11,6 @@ public interface IProductService{
 
     Product getById(Long id);
 
+    List<Product> search(String search);
+
 }

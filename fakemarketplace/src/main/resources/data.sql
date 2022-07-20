@@ -32,7 +32,7 @@ VALUES
       products
       (name, category, price, img, description, seller_id)
     VALUES
-      ('Cuadro Van Gogh', 'Cuadros', 2, 'https://cloudfront-us-east-1.images.arcpublishing.com/culturacolectiva/KUFCDXCONRDCHFF5Z4XVP6DZKM.jpg', 'I m a little description', 1);
+      ('Eric Cuadro', 'Cuadros', 2, 'https://cloudfront-us-east-1.images.arcpublishing.com/culturacolectiva/KUFCDXCONRDCHFF5Z4XVP6DZKM.jpg', 'I m a little description', 1);
       INSERT
       INTO
         products

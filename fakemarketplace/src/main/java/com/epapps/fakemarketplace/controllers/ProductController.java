@@ -35,6 +35,11 @@ public class ProductController {
         return product;
     }
 
+    @GetMapping(value="/products", params="search")
+    List<Product> getSearch(@RequestParam String search){
+        return productService.search(search);
+    }
+
 
 
 

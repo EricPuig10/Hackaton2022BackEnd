@@ -32,5 +32,12 @@ public class ProductService implements IProductService {
         return opProduct;
     }
 
+    @Override
+    public List<Product> search(String search) {
+        var searchCollection = this.productRepository.findByNameContainsIgnoreCase(search);
+        return searchCollection;
+    }
+
+
 
 }
