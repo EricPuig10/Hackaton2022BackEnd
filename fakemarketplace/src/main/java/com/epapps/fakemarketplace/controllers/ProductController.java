@@ -1,13 +1,8 @@
 package com.epapps.fakemarketplace.controllers;
 
-import com.epapps.fakemarketplace.dto.ProductRequestDto;
 import com.epapps.fakemarketplace.models.Product;
-import com.epapps.fakemarketplace.models.User;
 import com.epapps.fakemarketplace.services.IProductService;
 import com.epapps.fakemarketplace.services.IUserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

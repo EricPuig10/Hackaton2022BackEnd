@@ -14,4 +14,8 @@ public interface IProductRepository extends JpaRepository<Product, Long> {
             "where upper(p.name) like upper(concat('%', :search, '%'))")
     List <Product>  findByNameContainsIgnoreCase(@Param("search") String search);
 
+    //@Query("select p from Product p " +
+           // "where upper(p.category) like upper(concat('%', :search, '%'))")
+    //List <Product>  findByCategoryContainsIgnoreCase(@Param("search") String search);
+
 }

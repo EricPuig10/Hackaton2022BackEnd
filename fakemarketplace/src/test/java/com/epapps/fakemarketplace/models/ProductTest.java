@@ -7,16 +7,18 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ProductTest {
-
     @Test
-    void commentCount(){
+    void messagesCount() {
         Product product = new Product();
-        Comment comment = new Comment();
+        Message message = new Message();
 
-        product.addComment((comment));
+        product.addMessage((message));
 
-        int sut = product.commentCount();
+        int sut = product.messagesCount();
 
         assertThat(sut, equalTo(1));
     }
+
+    
+
 }

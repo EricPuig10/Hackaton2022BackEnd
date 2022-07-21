@@ -1,7 +1,10 @@
 package com.epapps.fakemarketplace.controllers;
 
 
+import com.epapps.fakemarketplace.dto.MessageRequestDto;
+import com.epapps.fakemarketplace.dto.MessageResDto;
 import com.epapps.fakemarketplace.models.Message;
+import com.epapps.fakemarketplace.models.User;
 import com.epapps.fakemarketplace.services.IMessageService;
 import com.epapps.fakemarketplace.services.IProductService;
 import com.epapps.fakemarketplace.services.IUserService;
@@ -14,9 +17,11 @@ import java.util.List;
 public class MessageController {
 
     private IMessageService messageService;
+    private IUserService userService;
 
-    public MessageController(IMessageService messageService) {
+    public MessageController(IMessageService messageService, IUserService userService) {
         this.messageService = messageService;
+        this.userService = userService;
     }
 
     @GetMapping("/messages")
@@ -26,11 +31,17 @@ public class MessageController {
 
     @GetMapping("/products/{id}/messages")
     List<Message> getProductMessages(@PathVariable Long id){
-        return messageService.findByMoment(id);
+        return messageService.findByProduct(id);
     }
 
+    @CrossOrigin(origins = "*")
     @PostMapping("/messages")
-    Message createMessage(@RequestBody Message message){
-        return messageService.create(message);
+    MessageResDto createMessage(@RequestBody MessageRequestDto messageRequestDto){
+        //var authUser = getAuthUser();
+        return messageService.create(messageRequestDto);
+    }
+
+    private User getAuthUser(){
+        return userService.getById(1L);
     }
 }

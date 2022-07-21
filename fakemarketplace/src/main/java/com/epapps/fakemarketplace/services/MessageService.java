@@ -1,5 +1,8 @@
 package com.epapps.fakemarketplace.services;
 
+import com.epapps.fakemarketplace.dto.MessageRequestDto;
+import com.epapps.fakemarketplace.dto.MessageResDto;
+import com.epapps.fakemarketplace.mappers.MessageMapper;
 import com.epapps.fakemarketplace.models.Message;
 import com.epapps.fakemarketplace.models.Product;
 import com.epapps.fakemarketplace.models.User;
@@ -19,9 +22,13 @@ public class MessageService implements IMessageService{
     private IUserRepository userRepository;
 
 
-    public MessageService(IMessageRepository messageRepository) {
+    public MessageService(IMessageRepository messageRepository, IProductRepository productRepository, IUserRepository userRepository) {
         this.messageRepository = messageRepository;
+        this.productRepository = productRepository;
+        this.userRepository = userRepository;
     }
+
+
 
     @Override
     public List<Message> getAll() {
@@ -31,23 +38,21 @@ public class MessageService implements IMessageService{
     }
 
     @Override
-    public List<Message> findByMoment(Long id) {
+    public List<Message> findByProduct(Long id) {
         List<Message> momentComments = new ArrayList<>();
         messageRepository.findByMomentId(id).forEach(momentComments::add);
         return momentComments;
     }
 
     @Override
-    public Message create(Message message) {
-        Product product = this.productRepository.findById(message.getProduct().getId()).get();
-        User creator = this.userRepository.findById(message.getCreator().getId()).get();
-        Message newMessage = new Message(message, product, creator);
-        newMessage.setMessage(message.getMessage());
-        newMessage.setCreator(message.getCreator());
-        newMessage.setProduct(message.getProduct());
+    public MessageResDto create(MessageRequestDto messageRequestDto) {
+        Product product = this.productRepository.findById(messageRequestDto.getProductId()).get();
+        User creator = this.userRepository.findById(messageRequestDto.getUserId()).get();
+        Message message = new MessageMapper().mapReqToComment(messageRequestDto, product, creator);
 
-        this.messageRepository.save(newMessage);
-        return newMessage;
+
+        this.messageRepository.save(message);
+        return new MessageMapper().mapCommentToRes(message);
 
     }
 }

@@ -33,4 +33,16 @@ public class Product {
     private User seller;
 
 
+    @OneToMany(mappedBy = "product")
+    @JsonIgnore
+    private List<Message> messageList = new ArrayList<>();
+
+    @JsonSerialize
+    public int messagesCount(){
+        return this.messageList.size();
+    }
+
+    public void addMessage(Message message) {
+        this.messageList.add(message);
+    }
 }

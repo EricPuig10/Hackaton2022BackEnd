@@ -29,7 +29,5 @@ public class Message {
     @JsonIgnore
     private Product product;
 
-    public Message(Message message, Product product, User creator) {
 
-    }
 }

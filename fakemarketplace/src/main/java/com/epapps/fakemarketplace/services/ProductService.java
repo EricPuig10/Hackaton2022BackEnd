@@ -1,14 +1,11 @@
 package com.epapps.fakemarketplace.services;
 
 
-import com.epapps.fakemarketplace.dto.ProductRequestDto;
 import com.epapps.fakemarketplace.models.Product;
-import com.epapps.fakemarketplace.models.User;
 import com.epapps.fakemarketplace.repositories.IProductRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class ProductService implements IProductService {

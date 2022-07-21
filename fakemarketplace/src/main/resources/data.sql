@@ -10,34 +10,40 @@ VALUES
     users
     (user_Name, img)
   VALUES
-    ('Pancho Porto', 'https://cdn-icons-png.flaticon.com/512/21/21104.png');
+    ('Pancho Porto', 'https://media-exp1.licdn.com/dms/image/sync/C4E27AQHWMMCo-snZyw/articleshare-shrink_1280_800/0/1658395288101?e=1659002400&v=beta&t=BFYPAp3TuLDp9PKzXRCfUEteOOAznlzpyxqxBEyVyUE');
   INSERT
   INTO
     users
     (user_Name, img)
   VALUES
-    ('Flod', 'https://cdn-icons-png.flaticon.com/512/21/21104.png');
+    ('Flod', 'https://www.artmajeur.com/medias/portrait/f/l/flodouce/artist/541166_at_work_flo-au-boulot.jpg');
 
   INSERT
   INTO
     users
     (user_Name, img)
   VALUES
-    ('Benito Leal', 'https://cdn-icons-png.flaticon.com/512/21/21104.png');
+    ('Benito Leal', 'https://www.artmajeur.com/medias/profile/a/n/ancalatita/profile/profile_blanconegro.jpg?v=1634138748');
 
 INSERT
   INTO
     users
     (user_Name, img)
   VALUES
-    ('Marisol Evora', 'https://cdn-icons-png.flaticon.com/512/21/21104.png');
+    ('Marisol Evora', 'https://cdn.singulart.com/artists/v2/pictures/cropped/artwork/base/33687_artwork_bd8e8498fb4efb2d633ee993f0061f88.jpeg');
 
 INSERT
   INTO
     users
     (user_Name, img)
   VALUES
-    ('Alvaro Garcia', 'https://cdn-icons-png.flaticon.com/512/21/21104.png');
+    ('Alvaro Garcia', 'https://www.artmajeur.com/medias/portrait/a/l/alvaro-garcia-lema/artist/768634_at_work_da17fcc8-1d8d-4ae2-8c1e-7dd57e0bf2f2.jpg');
+INSERT
+INTO
+  users
+  (user_Name, img)
+VALUES
+  ('UserLogged', 'https://electronicssoftware.net/wp-content/uploads/user.png');
 
 
 
